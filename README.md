@@ -1,6 +1,4 @@
-# Nombre del Proyecto
-
-Proyecto de Tienda Ecommerce de Surf "Square Clothing Co."
+# Proyecto de Tienda Ecommerce de Surf "Square Clothing Co."
 
 ## Descripción
 
