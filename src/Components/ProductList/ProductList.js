@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import "./ProductList.css";
-
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -18,7 +17,9 @@ const ProductList = () => {
     <div className="container d-flex justify-content-center flex-wrap">
       {products.map((product) => (
         <div style={{ margin: 20 }} key={product.id}>
-          <ItemListContainer product={product} />
+          <Link to={`/detail/${product.id}`} className="text-decoration-none">
+            <ItemListContainer product={product} />
+          </Link>
         </div>
       ))}
     </div>

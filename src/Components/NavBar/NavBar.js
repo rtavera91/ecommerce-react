@@ -1,15 +1,15 @@
 import React from "react";
-//import logo from "././assets/icons8-logo-500.svg";
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           Square Shopping Co.
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,6 +23,21 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <Link class="nav-link active" to="/">
+                Home
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/about">
+                About
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/contact">
+                Contact
+              </Link>
+            </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -35,24 +50,27 @@ const NavBar = () => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/category/men's clothing">
                     Men
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/category/jewelery">
                     Jewelry
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" to="/category/electronics">
                     Electronics
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link
+                    className="dropdown-item"
+                    to="/category/women's clothing"
+                  >
                     Women
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -63,7 +81,7 @@ const NavBar = () => {
               type="search"
               placeholder="Search"
               aria-label="Search"
-            ></input>
+            />
             <button className="btn btn-outline-success" type="submit">
               Search
             </button>

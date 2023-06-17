@@ -8,18 +8,18 @@ import { useParams } from "react-router-dom";
 const DetailPage = () => {
   const [product, setProduct] = useState({});
 
-  let { id } = useParams();
+  let { productId } = useParams();
 
   useEffect(() => {
     axios
-      .get(`https://fakestoreapi.com/products/${id}`)
+      .get(`https://fakestoreapi.com/products/${productId}`)
       .then((response) => {
         setProduct(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
-  }, [id]);
+  }, [productId]);
 
   return (
     <div style={{ display: "flex", justifyContent: "center", margin: 20 }}>

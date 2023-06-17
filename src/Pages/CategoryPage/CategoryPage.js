@@ -24,11 +24,14 @@ const CategoryPage = () => {
 
   return (
     <div>
-      {filteredProducts.map((product) => (
-        <div style={{ margin: 10 }} key={product.id}>
-          <ItemListContainer product={product} />
-        </div>
-      ))}
+      <h1 className="text-center">Collection: {categoryId}</h1>
+      <div className="className=container d-flex justify-content-center flex-wrap">
+        {filteredProducts.map((product) => (
+          <div style={{ margin: 10 }} key={product.id}>
+            <ItemListContainer product={product} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
