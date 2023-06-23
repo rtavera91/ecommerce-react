@@ -1,6 +1,7 @@
 //Componente que renderiza la tarjeta de cada producto que toma de la API en ItemListContainer
 
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 //MUI
 import Card from "@mui/material/Card";
@@ -36,7 +37,12 @@ const ItemListContainer = ({ product }) => {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
+          <Button
+            size="small"
+            color="primary"
+            component={Link}
+            to={`/detail/${product.id}`}
+          >
             Learn more
           </Button>
         </CardActions>
