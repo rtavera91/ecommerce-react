@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import ItemListContainer from "../../Components/ItemListContainer/ItemListContainer";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-domçç";
 
 const CategoryPage = () => {
   const [products, setProducts] = useState([]);
@@ -17,7 +17,7 @@ const CategoryPage = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [categoryId]); // Agregamos categoryId al array de dependencias
 
   const filteredProducts = products.filter(
     (product) => product.category === categoryId
